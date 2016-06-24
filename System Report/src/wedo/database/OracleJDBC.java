@@ -5,6 +5,10 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class OracleJDBC {
+	
+	/**
+	 * create new Oracle DB connection 
+	 * */
 
 	public static Connection createJDBCConnection(String ip, String port, String serviceName, String username, String password) {
 

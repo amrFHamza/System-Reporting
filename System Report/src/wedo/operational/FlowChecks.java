@@ -20,9 +20,10 @@ public class FlowChecks {
 	public static void main(String[] args) {
 		getFlowsExceptions();
 		getRedSemaphores();
-		getExcutionTimeofRunningFlows();
+		getExecutionTimeofRunningFlows();
 	}
 	
+
 	public static void getRedSemaphores(){
 		
 		
@@ -43,7 +44,7 @@ public class FlowChecks {
 		
 	}
 	
-	public static void getExcutionTimeofRunningFlows(){
+	public static void getExecutionTimeofRunningFlows(){
 		
 		String sql = "SELECT TO_CHAR (r.created_date, 'YYYYMMDD HH24:MI:SS') EXEC_DATE, 24 * (sysdate - r.created_date) as Time_Elapsed, FLOW_RUN_ID,";
 		sql = sql + "f.flow_name, rtrim(replace(replace(replace(extract(xmltype(flow_definition), '//flow/tasklist/task[@class=" ;
